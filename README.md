@@ -1,7 +1,7 @@
 Sony Xperia L
 ==============
 
-The Sony Xperia L (codenamed "TaoShan") is a mid to low-range smartphone from Sony Mobile.
+The Sony Xperia L (codenamed "_TaoShan_") is a mid to low-range smartphone from Sony Mobile.
  
 This is WIP device tree for Xperia L for the CyanogenMod project..
 
@@ -29,7 +29,7 @@ This branch is for building CyanogenMod 11 (or Android KitKat 4.4 AOSP based rom
 WIP.
 
 To build use: 
-Use my blob repo on my github.com/uberlaggydarwin/proprietary_vendor_sony so use that for updates and kernel repo at github.com/uberlaggydarwin/kernel_sony_taoshan
+Use my blob repo on my github.com/uberlaggydarwin/proprietary_vendor_sony so use that for updates and kernel repo at github.com/uberlaggydarwin/android_kernel_sony_msm8x30
 
 DRAGONS MAY APPEAR BEHIND ANY CORNER AND THIS REPO IS REBASED FREQUENTLY.
 
