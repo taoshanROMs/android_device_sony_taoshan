@@ -54,7 +54,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Device specific init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.device.rc:root/init.device.rc \
     $(LOCAL_PATH)/rootdir/root/init.qcom.rc:root/init.qcom.rc \
     $(LOCAL_PATH)/rootdir/root/fstab.qcom:root/fstab.qcom \
     $(LOCAL_PATH)/rootdir/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
