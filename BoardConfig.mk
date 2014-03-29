@@ -102,6 +102,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/taoshan/custombootimg.mk
+DEVICE_RESOLUTION := 480x854
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := device/sony/taoshan/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS := device/sony/taoshan/recovery/twrpgraphics.c
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 # use large text on this device
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
 

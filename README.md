@@ -3,13 +3,13 @@ Sony Xperia L
 
 The Sony Xperia L (codenamed "_TaoShan_") is a mid to low-range smartphone from Sony Mobile.
  
-This is WIP device tree for Xperia L for the CyanogenMod project..
+This is WIP device tree for Xperia L for the OmniROM project..
 
 Xperia L device tree - WIP
 
-This is for CyanogenMod 11 (Android 4.4.2)
+This is for OmniROM (Android 4.4.2)
 
-It was announced on 18 March 2013. It is supported in CyanogenMod 11.
+It was announced on 18 March 2013. It is supported in CyanogenMod 11 and OmniROM.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -24,7 +24,7 @@ Camera  | 8MPx (IMX134) , HDR, LED Flash
 NFC     | Yes
 
 
-This branch is for building CyanogenMod 11 (or Android KitKat 4.4 AOSP based roms) ROMS.
+This branch is for building OmniROM (or Android KitKat 4.4 AOSP based roms) ROMS.
 
 WIP.
 
