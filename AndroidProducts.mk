@@ -16,4 +16,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_taoshan.mk \
-	$(LOCAL_DIR)/omni_taoshan.mk 
+    $(LOCAL_DIR)/omni_taoshan.mk 
