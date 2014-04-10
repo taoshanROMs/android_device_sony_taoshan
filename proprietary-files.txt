@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-
 #
 # ADSP
 #
@@ -24,6 +23,8 @@ lib/libadsprpc.so
 #
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libdiag.so
+lib/libalsa-intf.so
 
 #
 # Bluetooth
@@ -145,15 +146,11 @@ lib/libqdutils.so
 lib/hw/nfc.default.so
 etc/firmware/libpn544_fw.so
 
-
-
 #
 # Post Processing
 #
 bin/mm-pp-daemon
 
-
-lib/libalsa-intf.so
 lib/libc2d2_z180.so
 lib/libc2dcolorconvert.so
 lib/libCB.so
@@ -185,7 +182,6 @@ lib/libdrmfs.so
 lib/libdrmtime.so
 lib/libQSEEComAPI.so
 
-lib/libexternal.so
 lib/libfastcvopt.so
 lib/libgenlock.so
 lib/libI420colorconvert.so
@@ -202,6 +198,8 @@ lib/libmorpho_hdr_checker.so
 lib/libmorpho_image_stabilizer3.so
 lib/libmorpho_posture_detect.so
 lib/libmorpho_scene_detector.so
+lib/libmorpho_edit_engine.so
+lib/libmorpho_fdw.so
 
 etc/firmware/a300_pm4.fw
 etc/firmware/a300_pfp.fw
@@ -264,8 +262,6 @@ lib/libqmi_cci.so
 lib/libqmi_common_so.so
 lib/libqmi_csi.so
 lib/libqmi_encdec.so
-lib/libqservice.so
-
 
 lib/librmp.so
 lib/libsc-a2xx.so
@@ -280,4 +276,3 @@ etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/wifi/WCNSS_qcom_cfg.ini
 etc/wifi/WCNSS_qcom_wlan_nv.bin
 lib/modules/wlan.ko
-
