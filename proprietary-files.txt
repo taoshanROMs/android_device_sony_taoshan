@@ -167,7 +167,6 @@ lib/libchromatix_imx134_zsl.so
 # Time
 #
 bin/time_daemon
-lib/libtime_genoff.so
 
 #
 # QSEECOM
