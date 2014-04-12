@@ -58,7 +58,7 @@ BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 
 # CyanogenMod Inline-kernel building stuff (Disable this for ROM's without this feature)
 TARGET_KERNEL_CONFIG := cyanogenmod_taoshan_defconfig
-TARGET_KERNEL_SOURCE := kernel/sony/msm8x30
+TARGET_KERNEL_SOURCE := kernel/sony/taoshan
 
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
