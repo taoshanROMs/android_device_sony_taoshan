@@ -58,7 +58,7 @@ BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 
 # CyanogenMod Inline-kernel building stuff (Disable this for ROM's without this feature)
 TARGET_KERNEL_CONFIG := cyanogenmod_taoshan_defconfig
-TARGET_KERNEL_SOURCE := kernel/sony/taoshan
+TARGET_KERNEL_SOURCE := kernel/sony/msm8x30
 
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
@@ -103,9 +103,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/taoshan/custombootimg.mk
 DEVICE_RESOLUTION := 480x854
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := device/sony/taoshan/recovery/recovery_keys.c
-BOARD_CUSTOM_GRAPHICS := device/sony/taoshan/recovery/twrpgraphics.c
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
 # use large text on this device
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
 
@@ -166,4 +163,3 @@ BOARD_SEPOLICY_UNION += \
     thermald.te \
     ueventd.te \
     wpa_supplicant.te
-
