@@ -14,17 +14,25 @@
 
 $(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
-# Inherit CM common GSM stuff.
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Boot animation
+TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_WIDTH := 480
+
+# Overrides
+PRODUCT_NAME := slim_taoshan
+PRODUCT_DEVICE := taoshan
+
+# Release name
+PRODUCT_RELEASE_NAME := SlimTaoshan
 
 # Build fingerprints
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C2105_1272-2267 BUILD_FINGERPRINT=Sony/C2105_1272-2267/C2105:4.2.2/15.3.A.1.14/Android.1014:user/release-keys PRIVATE_BUILD_DESC="C2105-user 4.2.2 JDQ39 Android.1014 test-keys"
-
-PRODUCT_NAME := cm_taoshan
-PRODUCT_DEVICE := taoshan
