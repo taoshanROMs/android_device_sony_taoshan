@@ -137,8 +137,6 @@ lib/libqdi.so
 lib/libqdp.so
 lib/libril-qc-qmi-1.so
 
-lib/libqdutils.so
-
 
 #
 # NFC
@@ -175,16 +173,12 @@ lib/libtime_genoff.so
 #
 # QSEECOM
 #
-lib/libdrmdecrypt.so
 bin/qseecomd
 lib/libdrmdiag.so
 lib/libdrmfs.so
 lib/libdrmtime.so
 lib/libQSEEComAPI.so
-
 lib/libfastcvopt.so
-lib/libgenlock.so
-lib/libI420colorconvert.so
 
 lib/libllvm-arm.so
 lib/libmm-abl.so
@@ -224,8 +218,8 @@ etc/firmware/tzsuntory.b02
 etc/firmware/tzsuntory.b03
 etc/firmware/tzsuntory.mdt
 
+lib/libtzplayready.so
 lib/libprofiler_msmadc.so
-lib/libqdMetaData.so
 
 #
 # Sensors
@@ -263,11 +257,8 @@ lib/libqmi_common_so.so
 lib/libqmi_csi.so
 lib/libqmi_encdec.so
 
-lib/librmp.so
 lib/libsc-a2xx.so
-lib/libstagefrighthw.so
 lib/libsurround_proc.so
-lib/libtzplayready.so
 
 #
 # WiFi Firmware
