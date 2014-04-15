@@ -74,7 +74,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal monitor configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/thermald-8930.conf:system/etc/thermald-8930.conf
+    $(LOCAL_PATH)/rootdir/system/etc/thermald-8930.conf:system/etc/thermald.conf
 
 # Key layouts
 PRODUCT_COPY_FILES += \
@@ -92,6 +92,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/rootdir/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/rootdir/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+
+PRODUCT_PACKAGES += \
+    mac-update
 
 # Post recovery script
 PRODUCT_COPY_FILES += \
@@ -148,7 +151,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8960 \
     gralloc.msm8960 \
     copybit.msm8960 \
-    libqdMetaData \
+	libqdMetaData \
     memtrack.msm8960
 
 # Lights
@@ -177,9 +180,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
+    telephony.lteOnCdmaDevice=0 \
     ro.use_data_netmgrd=true
 
-# Build Prop redefines 
+# Build Prop redefines
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true \
     persist.audio.fluence.mode=endfire \
@@ -209,7 +213,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_GMS_CLIENTID_BASE ?= android-sonyericsson
 
-PRODUCT_PACKAGES += Torch
+PRODUCT_PACKAGES +=  \
+Torch \
+libtime_genoff
 
 # RIL sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \

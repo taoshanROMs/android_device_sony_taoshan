@@ -60,19 +60,18 @@ BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 TARGET_KERNEL_CONFIG := cyanogenmod_taoshan_defconfig
 TARGET_KERNEL_SOURCE := kernel/sony/msm8x30
 
-# Dumpstate
-BOARD_LIB_DUMPSTATE := libdumpstate.sony
-
 # WiFi Config
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_WLAN_DEVICE                := qcwcn
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
+HOSTAPD_VERSION                  := VER_0_8_X
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB  := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME          := "wlan"
+BOARD_HAS_CFG80211_KERNEL3_4     := true
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 
@@ -116,6 +115,7 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_QCOM_DISPLAY_VARIANT := caf
 TARGET_QCOM_MEDIA_VARIANT := caf
+BOARD_USES_QC_TIME_SERVICES := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -162,4 +162,3 @@ BOARD_SEPOLICY_UNION += \
     thermald.te \
     ueventd.te \
     wpa_supplicant.te
-
