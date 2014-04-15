@@ -142,7 +142,6 @@ lib/libril-qc-qmi-1.so
 # NFC
 #
 lib/hw/nfc.default.so
-etc/firmware/libpn544_fw.so
 
 #
 # Post Processing
@@ -266,4 +265,3 @@ lib/libsurround_proc.so
 etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/wifi/WCNSS_qcom_cfg.ini
 etc/wifi/WCNSS_qcom_wlan_nv.bin
-lib/modules/wlan.ko
