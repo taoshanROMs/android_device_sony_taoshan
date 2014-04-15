@@ -57,7 +57,7 @@ BOARD_KERNEL_CMDLINE  := console=ttyHSL0,115200,n8 androidboot.hardware=qcom use
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 
 # CyanogenMod Inline-kernel building stuff (Disable this for ROM's without this feature)
-TARGET_KERNEL_CONFIG := cm_taoshan_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_taoshan_defconfig
 TARGET_KERNEL_SOURCE := kernel/sony/msm8x30
 
 # Dumpstate
