@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+//recovery graphics file
+
 #include <stdbool.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -347,7 +349,7 @@ int gr_init(void)
     gr_init_font();
     gr_vt_fd = open("/dev/tty0", O_RDWR | O_SYNC);
     if (gr_vt_fd < 0) {
-        // This is non-fatal; post-Cupcake kernels don't have tty0.
+        // This is non-fatal; Anything past Android 1.5 (Cupcake) kernels don't have tty0.
         perror("can't open /dev/tty0");
     } else if (ioctl(gr_vt_fd, KDSETMODE, (void*) KD_GRAPHICS)) {
         // However, if we do open tty0, we expect the ioctl to work.
