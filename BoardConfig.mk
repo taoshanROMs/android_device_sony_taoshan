@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Product-specific compile-time definitions.
+
 # inherit from Sony Common
 include device/sony/common/BoardConfigCommon.mk
 
@@ -25,7 +27,7 @@ include vendor/sony/taoshan/BoardConfigVendor.mk
 TARGET_OTA_ASSERT_DEVICE := C2104,C2105,c2104,c2105,taoshan
 
 # Include Path
-TARGET_SPECIFIC_HEADER_PATH := device/sony/taoshan/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/taoshan/include
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := qcom
@@ -57,6 +59,7 @@ BOARD_KERNEL_CMDLINE  := console=ttyHSL0,115200,n8 androidboot.hardware=qcom use
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 
 # CyanogenMod Inline-kernel building stuff (Disable this for ROM's without this feature)
+
 TARGET_KERNEL_CONFIG := cyanogenmod_taoshan_defconfig
 TARGET_KERNEL_SOURCE := kernel/sony/msm8x30
 
@@ -65,10 +68,10 @@ BOARD_HAS_QCOM_WLAN              := true
 BOARD_WLAN_DEVICE                := qcwcn
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 HOSTAPD_VERSION                  := VER_0_8_X
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB  := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME          := "wlan"
 BOARD_HAS_CFG80211_KERNEL3_4     := true
@@ -78,9 +81,8 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 BOARD_HARDWARE_CLASS := device/sony/taoshan/cmhw
 
 # Camera
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK -DMR0_CAMERA_BLOB
+COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
 USE_DEVICE_SPECIFIC_CAMERA := true
-
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
@@ -101,6 +103,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/taoshan/custombootimg.mk
+BOARD_CUSTOM_GRAPHICS := ../../../device/sony/taoshan/recovery/twrpgraphics.c
 DEVICE_RESOLUTION := 480x854
 # use large text on this device
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
@@ -126,7 +129,7 @@ TARGET_USES_QCOM_MM_AUDIO := true
 TARGET_LS_USE_ALS_NODE := true
 
 # Partition information
-BOARD_VOLD_MAX_PARTITIONS := 27
+BOARD_VOLD_MAX_PARTITIONS := 33
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200
@@ -163,3 +166,4 @@ BOARD_SEPOLICY_UNION += \
     thermald.te \
     ueventd.te \
     wpa_supplicant.te
+	

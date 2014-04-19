@@ -629,6 +629,11 @@ service bbset /system/bin/sh /system/etc/init.qcom.baseband.sh
     class late_start
     oneshot
 
+service wcnss-service /system/bin/wcnss_service
+    class late_start
+    user system
+    group system wifi
+    oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
@@ -637,4 +642,5 @@ service bugreport /system/bin/dumpstate -d -p -B \
     disabled
     oneshot
     keycodes 114 115 116
+
 
